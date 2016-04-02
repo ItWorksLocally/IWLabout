@@ -1,2 +1,3 @@
-# IWLabout
+# IWL
+
 About us page
