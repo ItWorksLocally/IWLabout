@@ -5,10 +5,10 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish')
       },
-      build: ['Gruntfile.js', 'assets/js/*.js']
+      build: ['Gruntfile.js', 'assets/js/main.js']
     },
-    sass : {
-      build: {
+    sass              : {
+      dist: {
         options: {
           outputStyle: 'compressed',
           sourceMap  : false
@@ -26,15 +26,15 @@ module.exports = function(grunt) {
     },
     watch : {
       css: {
-        files  : 'public/asset/scss/**/*.scss',
-        tasks  : ['sass'],
+        files  : ['asset/scss/**'],
+        tasks  : ['sass','cssmin'],
         options: {
           livereload: true
         }
       },
       js : {
         files: ['assets/js/**'],
-        tasks: ['requirejs','uglify']
+        tasks: ['uglify']
       }
     },
     uglify: {
@@ -51,10 +51,14 @@ module.exports = function(grunt) {
       options: {
         banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
       },
-      build: {
-        files: {
-          'assets/css/style.min.css': 'assets/css/style.css'
-        }
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'assets/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'assets/css',
+          ext: '.min.css'
+        }]
       }
     }
   });
@@ -65,6 +69,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('dev',['sass','cssmin','jshint','uglify']);
   grunt.registerTask('default', ['jshint']);
 
 };

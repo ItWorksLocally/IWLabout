@@ -24,6 +24,7 @@
   "dependencies": {
     "backbone": "~1.2.2",
     "bourbon": "~4.2.4",
+    "neat": "~1.7.2",
     "jquery": "~2.1.4",
     "requirejs": "~2.1.20",
     "requirejs-text": "~2.0.14",
