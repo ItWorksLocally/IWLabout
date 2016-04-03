@@ -13,6 +13,7 @@
   "author": "Lovro Predovan",
   "devDependencies": {
     "grunt": "~0.4.4",
+    "grunt-sass": "^1.1.0",
     "grunt-contrib-jshint": "latest",
     "jshint-stylish": "latest",
     "grunt-contrib-uglify": "latest",
