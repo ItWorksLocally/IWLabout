@@ -5,6 +5,7 @@ require.config({
     backbone        : '../../vendor/backbone/backbone',
     text            : '../../vendor/requirejs-text/text',
     require         : '../../vendor/requirejs/require',
+    wow             : './libs/wow'
   },
   shim: {
     backbone: {

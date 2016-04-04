@@ -3,13 +3,16 @@ define([
     'underscore',
     'backbone',
     'router',
+    'wow',
     'views/header',
   ],
-function($, _, Backbone, Router, HeaderView) {
+function($, _, Backbone, Router, WOW, HeaderView) {
   'use strict';
 
   var initialize = function(){
     Router.initialize();
+    //new WOW().init();
+
     this.renderLayout();
   };
 

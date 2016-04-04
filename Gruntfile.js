@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish')
       },
-      build: ['Gruntfile.js', 'assets/js/*','!assets/js/*.min.js','!assets/js/dist.js']
+      build: ['Gruntfile.js', 'assets/js/*','!assets/js/*.min.js','!assets/js/dist.js','!assets/js/libs']
     },
     sass              : {
       dist: {

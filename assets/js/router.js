@@ -45,7 +45,7 @@ define([
     });
 
     this.setHrefEvents();
-    Backbone.history.start({pushState: true, root: 'iwl'});
+    Backbone.history.start({pushState: true, root: ''});
     return this;
   };
 
