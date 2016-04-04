@@ -13,15 +13,16 @@
   "author": "Lovro Predovan",
   "devDependencies": {
     "grunt": "~0.4.4",
+    "jshint-stylish": "latest",
     "grunt-sass": "^1.1.0",
     "grunt-contrib-jshint": "latest",
-    "jshint-stylish": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-imagemin": "latest",
-    "grunt-contrib-htmlmin": "latest"
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-requirejs": "^1.0.0"
   },
   "dependencies": {
     "bourbon": "^4.2.6"

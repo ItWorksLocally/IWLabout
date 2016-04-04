@@ -5,7 +5,7 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish')
       },
-      build: ['Gruntfile.js', 'assets/js/main.js']
+      build: ['Gruntfile.js', 'assets/js/*','!assets/js/*.min.js','!assets/js/dist.js']
     },
     sass              : {
       dist: {
@@ -34,7 +34,17 @@ module.exports = function(grunt) {
       },
       js : {
         files: ['assets/js/**'],
-        tasks: ['uglify']
+        tasks: ['jshint','requirejs']
+      }
+    },
+    requirejs         : {
+      compile: {
+        options: {
+          mainConfigFile: "assets/js/main.js",
+          name: "main",
+          out: "assets/js/dist.js",
+          preserveLicenseComments: false,
+        }
       }
     },
     uglify: {
@@ -43,7 +53,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'assets/js/main.min.js': 'assets/js/main.js'
+          'assets/js/dist.min.js': 'assets/js/dist.js'
         }
       }
     },
@@ -68,8 +78,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-  grunt.registerTask('dev',['sass','cssmin','jshint','uglify']);
+  grunt.registerTask('dev',['sass','cssmin','jshint','requirejs:compile','uglify',]);
   grunt.registerTask('default', ['jshint']);
-
 };
