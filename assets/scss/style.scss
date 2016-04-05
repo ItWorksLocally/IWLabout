@@ -1,11 +1,13 @@
 @import 'gridsettings';
 @import 'animate';
+@import 'icons';
 @import '../../vendor/bourbon/app/assets/stylesheets/bourbon';
 @import '../../vendor/neat/app/assets/stylesheets/neat';
 
 $black: #000;
 $white: #fff;
 $green: #259072;
+$body-background: #EEF2F3;
 $base-spacing: 1.5em !default;
 $action-color: #477DCA !default;
 $medium-screen: em(640) !default;
@@ -21,7 +23,7 @@ html{
 
 body{
   -webkit-font-smoothing: antialiased;
-  background: #EEF2F3;
+  background: $body-background;
   height: 100%;
 }
 
@@ -430,4 +432,18 @@ article {
     .normal.container article {
       opacity: 1;
       @include transform(rotateX(0deg));
+    }
+
+    .small{
+      height: 360px;
+      width: auto;
+    }
+    .about-me{
+      text-align: left;
+      background: $white;
+      z-index: 100;
+    }
+    .side-image-content{
+      color: $black;
+      padding: 35px;
     }

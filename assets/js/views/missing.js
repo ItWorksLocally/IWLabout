@@ -11,11 +11,7 @@ define([
     initialize: function () {
       this.render();
     },
-
     render: function () {
-      var data = {
-        data: 'test'
-      };
       var compiledTemplate = _.template(MissingTemplate)(data);
       this.$el.html(compiledTemplate);
       return this;

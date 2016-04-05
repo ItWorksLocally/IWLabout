@@ -1,0 +1,36 @@
+<div class="flex-boxes about-me">
+  <div class="refills-wrapper">
+    <div class="flex-boxes">
+      <div class="flex-box">
+        <img class="small" src="<%= image %> ">
+      </div>
+      <div>
+        <div class="side-image-content">
+          <h4><%= role %> - <%= company %> , <%= hometown %> </h4>
+          <h1><%= name %>&nbsp;<%= surname %></h1>
+
+          <a href="<%= github %>"><img src="/assets/img/github.png"></a>
+          <a href="<%= twitter %>"><img src="/assets/img/twitter.png"></a>
+          <a href="<%= linkedin %>"><img src="/assets/img/linkedin.png"></a>
+          <hr>
+          <p><%= description %></p>
+          <p>&quot;<%= quote %>&quot;</p>
+          <br>
+          <br>
+          <br>
+          <h2>Education</h2>
+          <% _.each(education, function(school, index){ %>
+            <p><%= school.name %>: <%= school.years %></p>
+            <% }); %>
+            <h2>Skillset</h2>
+            <% _.each(skills, function(skill, index){ %>
+              <p><%= skill.name %> : <%= skill.level %> /10</p>
+              <% }); %>
+              <br>
+              <br>
+              <br>
+              <a href="http://itworkslocal.ly/">
+                <img src="/assets/img/iwl.png" alt="Logo image">
+              </a>
+            </div>
+          </div>

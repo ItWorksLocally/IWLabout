@@ -4,14 +4,20 @@ define([
   'backbone',
   'views/about',
   'views/story',
-  'views/missing'
-], function ($, _, Backbone, AboutView, StoryView, MissingView) {
+  'views/missing',
+  'views/about.me'
+], function ($, _, Backbone, AboutView, StoryView, MissingView, AboutMeView) {
 
   var AppRouter = Backbone.Router.extend({
+    currentView: null,
     routes:{
       '':'showAbout',
-      '/story':'showStory',
-      '*action':'showStory'
+      'story':'showStory',
+      'alen':'aboutMe',
+      'igor':'aboutMe',
+      'lovro':'aboutMe',
+      'zoran':'aboutMe',
+      '*action':'showStory',
     },
 
     switchView : function (view) {
@@ -42,6 +48,10 @@ define([
 
     app_router.on('route:showStory', function( path ){
       app_router.switchView(new StoryView({el: $("#content") }));
+    });
+
+    app_router.on('route:aboutMe', function( path ){
+      app_router.switchView(new AboutMeView({el: $("#content") }));
     });
 
     this.setHrefEvents();
