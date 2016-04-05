@@ -105,7 +105,8 @@ body{
   ul li a {
     color: $black;
     text-decoration: none;
-
+    padding: 0 30px;
+    
     &:focus,
     &:hover {
       color: $green;
