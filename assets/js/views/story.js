@@ -13,10 +13,7 @@ define([
     },
 
     render: function () {
-      var data = {
-        test: 'test'
-      };
-      var compiledTemplate = _.template(StoryTemplate)(data);
+      var compiledTemplate = _.template(StoryTemplate);
       this.$el.html(compiledTemplate);
       return this;
     },
