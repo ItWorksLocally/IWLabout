@@ -12,10 +12,7 @@ define([
     },
 
     render: function () {
-      var data = {
-        data: 'test'
-      };
-      var compiledTemplate = _.template(AboutTemplate)(data);
+      var compiledTemplate = _.template(AboutTemplate);
       this.$el.html(compiledTemplate);
       return this;
     },
