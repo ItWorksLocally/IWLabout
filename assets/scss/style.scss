@@ -47,6 +47,26 @@ body{
   border-bottom: 2px solid #F2F2F2;
   z-index: 1000;
 
+  .cta-button{
+    width: 100%;
+    color: $white;
+    background: $green;
+    padding: 9px;
+    border-radius: 4px;
+
+    &:hover{
+      background-color: transparentize($green, 0.5);
+      color: $white;
+      text-decoration: none;
+    }
+    &:focus,&:active,{
+      background-color: transparentize($green, 0.5);
+      color: $white;
+      text-decoration: none;
+    }
+
+  }
+
   .header-logo {
     margin-right: 1em;
     margin-bottom: 1em;
