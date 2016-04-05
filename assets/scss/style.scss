@@ -4,6 +4,8 @@
 @import '../../vendor/bourbon/app/assets/stylesheets/bourbon';
 @import '../../vendor/neat/app/assets/stylesheets/neat';
 
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,latin-ext);
+
 $black: #000;
 $white: #fff;
 $green: #259072;
@@ -17,14 +19,19 @@ $footer-color: white;
 $footer-link-color: transparentize($footer-color, 0.6);
 $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
+$break-small: 320px;
+$break-medium: 860px;
+$break-large: 1200px;
+
 html{
   height: 100%;
 }
 
 body{
   -webkit-font-smoothing: antialiased;
-  background: $body-background;
+  background: url('/assets/img/bg.png');
   height: 100%;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .header {
@@ -43,14 +50,11 @@ body{
   .header-logo {
     margin-right: 1em;
     margin-bottom: 1em;
-
-    @include media($large-screen) {
-      float: left;
-    }
+    float: left;
   }
 
   .central-element{
-    padding: 15px 43%;
+    padding: 15px 5%;
   }
 
   .header-logo img {
@@ -59,12 +63,19 @@ body{
 
   .social{
     padding: 0px 15%;
-    float: left;
+    float: right;
     margin: -10px 0 0 0;
 
     &:focus,
     &:hover {
       color: $green;
+    }
+
+    @media
+    (max-device-width: 860px) {
+      padding: 0 5%;
+      float: right;
+      margin: -90px 0 0;
     }
   }
 
@@ -145,6 +156,10 @@ body{
   }
 }
 
+.spacer{
+  margin: 25px 0;
+}
+
 #content{
   width: 100%;
   position: absolute;
@@ -193,7 +208,7 @@ body{
 
 
 #lovro-main{
-  background: url('/assets/img/lovro.jpg') no-repeat;
+  background: url('/assets/img/lovro.JPG') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -306,6 +321,24 @@ body {
     left:49.7%;
     background-color:$light-blue;
     height:100%;
+  }
+
+  img{
+    width: 400px;
+    height: auto;
+  }
+
+  a{
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      color: $green();;
+    }
+  }
+  h2{
+    color: $green;
+    border-bottom: 2px;
   }
 }
 
@@ -440,10 +473,30 @@ article {
     }
     .about-me{
       text-align: left;
-      background: $white;
       z-index: 100;
+
+      .flex-boxes .flex-box:nth-child(1){
+        border: none
+      }
+      .flex-boxes .flex-box{
+        background: none;
+        padding: 7em 2em 6em;
+        box-shadow: none;
+      }
+
+      .links-social{
+        margin: 20px 0;
+        img{
+          padding: 0 10px;
+        }
+      }
     }
     .side-image-content{
       color: $black;
       padding: 35px;
+    }
+
+    .story-link {
+      color: $green;
+      border-bottom: 2px;
     }

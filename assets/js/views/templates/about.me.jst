@@ -9,9 +9,11 @@
           <h4><%= role %> - <%= company %> , <%= hometown %> </h4>
           <h1><%= name %>&nbsp;<%= surname %></h1>
 
-          <a href="<%= github %>"><img src="/assets/img/github.png"></a>
-          <a href="<%= twitter %>"><img src="/assets/img/twitter.png"></a>
-          <a href="<%= linkedin %>"><img src="/assets/img/linkedin.png"></a>
+          <div class="links-social">
+            <a data-bypass href="<%= github %>"><img src="/assets/img/github.png"></a>
+            <a data-bypass href="<%= twitter %>"><img src="/assets/img/twitter.png"></a>
+            <a data-bypass href="<%= linkedin %>"><img src="/assets/img/linkedin.png"></a>
+          </div>
           <hr>
           <p><%= description %></p>
           <p>&quot;<%= quote %>&quot;</p>
@@ -29,7 +31,7 @@
               <br>
               <br>
               <br>
-              <a href="http://itworkslocal.ly/">
+              <a data-bypass href="http://itworkslocal.ly/">
                 <img src="/assets/img/iwl.png" alt="Logo image">
               </a>
             </div>
