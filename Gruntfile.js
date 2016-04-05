@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       },
       js : {
         files: ['assets/js/**'],
-        tasks: ['jshint','requirejs']
+        tasks: ['jshint','requirejs', 'requirejs:compile','uglify']
       }
     },
     requirejs         : {

@@ -3,6 +3,7 @@
 @import 'icons';
 @import '../../vendor/bourbon/app/assets/stylesheets/bourbon';
 @import '../../vendor/neat/app/assets/stylesheets/neat';
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,latin-ext);
 
 $black: #000;
 $white: #fff;
@@ -25,6 +26,7 @@ body{
   -webkit-font-smoothing: antialiased;
   background: $body-background;
   height: 100%;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .header {
@@ -287,7 +289,6 @@ $red: rgb(227, 50, 0);
 }
 /* Container Styling */
 body {
-  font-family: frutiger, futura, helvetica sans-serif;
   text-transform:uppercase;
   text-align:center;
   font-size:1em;
