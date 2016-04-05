@@ -105,7 +105,7 @@ body{
   ul li a {
     color: $black;
     text-decoration: none;
-    padding: 20px 30px;
+    padding: 20px 30px;;
 
     &:focus,
     &:hover {
@@ -478,7 +478,10 @@ article {
       z-index: 100;
 
       .flex-boxes .flex-box:nth-child(1){
-        border: none
+        border: none;
+        &:hover {
+          background-color : none;
+        }
       }
       .flex-boxes .flex-box{
         background: none;

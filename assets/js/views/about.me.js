@@ -37,7 +37,7 @@ define([
           hometown: "Varaždin",
           company: "Trikoder",
           role: "Backend Developer",
-          image: "/assets/img/igor.JPG",
+          image: "/assets/img/igor.jpg",
           quote: "Lovro, popravi ovo.",
           description: "Loves breaking things in the weirdest ways possible and making computers learn things.",
           github: "https://github.com/TheWildHorse",
